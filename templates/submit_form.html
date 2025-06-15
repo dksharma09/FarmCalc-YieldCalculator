@@ -1,0 +1,36 @@
+<!-- templates/submit.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Submit Form</title>
+</head>
+<body>
+    <h1>Submit Your Details</h1>
+    <form action="{{ url_for('thankyou') }}" method="POST">
+        <label>Area of your Land:</label>
+        <input type="text" name="area" required><br><br>
+        
+        <label>Select the Unit of your Land:</label>
+        <select name="areaInAcreasOrHectares" required>
+            <option value="">-- Select Unit --</option>
+            <option value="Acres">Acres</option>
+            <option value="Hectares">Hectares</option>
+        </select><br><br>
+
+        <label>Crop Type:</label>
+        <select name="cropType" required>
+            <option value="">-- Select Crop Type --</option>
+            <option value="Wheat">Wheat</option>
+            <option value="Rice">Rice</option>
+            <option value="Maize">Maize</option>
+            <option value="Soybean">Soybean</option>
+            <option value="Sugarcane">Sugarcane</option>
+        </select><br><br>
+
+        <label>Expected Yield Per Unit:</label>
+        <input type="text" name="expectedYieldPerUnitArea" required><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
